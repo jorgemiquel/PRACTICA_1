@@ -3,3 +3,9 @@
 h1 {
     font-family: 'Young Serif', serif;
 }
+
+.cerdo {
+    flex-direction: column;
+    margin: 10vh;
+    
+}
