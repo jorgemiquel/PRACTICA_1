@@ -1,7 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 
 h1 {
     font-family: 'Young Serif', serif;
+}
+
+body {
+    background-color: black;
+}
+
+#menu {
+    color: white;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    
+}
+
+#menu > ul {
+    display: flex;
+}
+
+#menu > ul > li {
+    margin: 0 20px;
+    list-style: none;
+}
+
+#menu > ul > li > a {
+    text-decoration: none;
 }
 
 .cerdo {
