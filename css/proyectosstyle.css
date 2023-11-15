@@ -11,3 +11,49 @@
 body {
     background-color: black;
 }
+
+#menu {
+    color: white;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 2vh;
+    
+}
+
+#menu > ul {
+    display: flex;
+}
+
+#menu > ul > li {
+    margin: 0 20px;
+    list-style: none;
+}
+
+#menu > ul > li > a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.row, .col {
+    border-radius: 20px;
+    margin: 20px;
+    padding-right: 0;
+}
+
+.row > div {
+    padding: 0;
+    border-radius: 20px;
+}
+
+.bg-dark {
+    --bs-bg-opacity: 0;
+}
+
+.navbar-expand-sm .navbar-collapse {
+    justify-content: right;
+}
