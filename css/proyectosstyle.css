@@ -57,3 +57,10 @@ img {
 .navbar-expand-sm .navbar-collapse {
     justify-content: right;
 }
+
+.carousel {
+    padding: 5%;
+}
+.carousel-inner {
+    border-radius: 20px;
+}
