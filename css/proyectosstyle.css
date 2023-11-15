@@ -4,34 +4,15 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+    color: white
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 
+
+
 body {
     background-color: black;
-}
-
-#menu {
-    color: white;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    margin-top: 2vh;
-    
-}
-
-#menu > ul {
-    display: flex;
-}
-
-#menu > ul > li {
-    margin: 0 20px;
-    list-style: none;
-}
-
-#menu > ul > li > a {
-    text-decoration: none;
 }
 
 img {
@@ -43,6 +24,7 @@ img {
     border-radius: 20px;
     margin: 20px;
     padding-right: 0;
+    justify-content: center;
 }
 
 .row > div {
@@ -61,6 +43,18 @@ img {
 .carousel {
     padding: 5%;
 }
+
 .carousel-inner {
     border-radius: 20px;
 }
+
+h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 800%;
+}
+
