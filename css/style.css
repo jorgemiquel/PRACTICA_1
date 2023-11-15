@@ -17,26 +17,12 @@ body {
     background-color: black;
 }
 
-#menu {
-    color: white;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    margin-top: 2vh;
-    
+.bg-dark {
+  --bs-bg-opacity: 0;
 }
 
-#menu > ul {
-    display: flex;
-}
-
-#menu > ul > li {
-    margin: 0 20px;
-    list-style: none;
-}
-
-#menu > ul > li > a {
-    text-decoration: none;
+.navbar-expand-sm .navbar-collapse {
+  justify-content: right;
 }
 
   .grid {
@@ -159,8 +145,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 
-iframe {
-  height: 100%;
+video {
   width: 100%;
   border-radius: 2%;
 }
