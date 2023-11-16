@@ -50,6 +50,7 @@ video {
 img {
     width: 100%;
     display: block;
+    border-radius: 20px;
 }
 
 .row, .col {
@@ -146,13 +147,20 @@ p {
         margin-left: 10em;
         margin-right: 10em;
         margin-top: 5%;
-        }
+    }
+
+}
+
+@media (max-width: 990px) {
+    .row {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 700px) {
     p {
-        margin-left: 5em;
-        margin-right: 5em;
+        margin-left: 3em;
+        margin-right: 3em;
         margin-top: 5%;
-        }
+    }
 }
