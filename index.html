@@ -284,43 +284,39 @@
     $('h1, h2, a').css('color', color);
   }
 
- // Function to handle button style changes
+ // Function para cambio de color
 function handleButtonStyle(background, iconColor) {
   if ($('#vbtn-radio2').prop('checked')) {
-    // If the sun button is selected, set black border for all buttons
-    $('.btn-outline-danger').css({
+      $('.btn-outline-danger').css({
       'background': background,
     });
 
-    // Set the icon color to white for the rainbow button when the sun button is selected
     $('.fa-rainbow').css('color', iconColor);
   } else {
     // For other buttons, apply the specified background and border
     $('.btn-outline-danger').css({
       'background': background,
-      'border-color': 'white' // Set the border color
+      'border-color': 'white' 
     });
-
-    // Reset the icon color to the specified color for the rainbow button
     $('.fa-rainbow').css('color', 'white');
   }
 }
 
-// Radio button change event listener
+// botones radio cambios
 $('input[name="vbtn-radio"]').change(function () {
   if ($('#vbtn-radio1').prop('checked')) {
-    // Moon button selected
+    // boton luna
     handleBackgroundChange('black');
     handleTextChange('white');
     handleButtonStyle('transparent', 'white');
   } else if ($('#vbtn-radio2').prop('checked')) {
-    // Sun button selected
+    // boton sol
     handleBackgroundChange('white');
     handleTextChange('black');
     $('.sun-icon').toggleClass('selected', $('#vbtn-radio2').prop('checked'));
     handleButtonStyle('transparent', 'white');
   } else if ($('#vbtn-radio3').prop('checked')) {
-    // Rainbow button selected
+    // boton arcoiris
     handleBackgroundChangeVideo();
     handleTextChange('white');
     handleButtonStyle('linear-gradient(to bottom right, #ff6b6b, #ffcc00, #80ff80, #33ccff, #bf66ff)', 'white');
