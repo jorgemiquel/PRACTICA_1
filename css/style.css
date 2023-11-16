@@ -240,8 +240,15 @@ h2 {
   .grid {
     margin: 20px;
   }
-
 }
+
+@media (min-width: 1200px){
+  .row {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
 
 ol, ul {
   padding-left: 0;
@@ -272,3 +279,8 @@ ol, ul {
 }
 
 
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
