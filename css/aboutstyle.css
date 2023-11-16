@@ -64,18 +64,8 @@ img {
     justify-content: right;
 }
 
-.carousel {
-    padding: 5%;
-}
-
-.carousel-inner {
-    border-radius: 20px;
-}
-
-h1 {
-    color: white;
-    display: flex;
-    justify-content: center;
+.container.text-center {
+    padding-top: 5vh;
 }
 
 .title {
@@ -125,8 +115,20 @@ h1 {
   
 }
 
+
 img {
     border-radius: 5%;
 }
 
 
+.row {
+    display: flex;
+   
+  }
+
+
+  iframe {
+    border-radius: 3%;
+    padding-top: 5vh;
+    overflow: hidden;
+  }
