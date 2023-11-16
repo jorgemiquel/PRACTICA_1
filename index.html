@@ -21,7 +21,6 @@
 
 <body>
 
-
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">LOREM IMPSUM</a>
@@ -51,13 +50,13 @@
       </li>
       <li style="--n: 0;">
         <figure>
-          <img width="640" height="427" src="img/graphic3.webp" alt="">
+          <img src="img/Married_for_a_long_time-vimeo-.gif" alt="gif">
         </figure>
       </li>
       <li style="--n: 0;">
         <figure>
-          <video src="video/graphic_video.mp4" autoplay loop mute></video>
-        </figure>
+          <img src="img/graphic3.webp" alt="" srcset="">
+        </figure>  
       </li>
       <li style="--n: 0;">
         <figure>
@@ -83,21 +82,9 @@
           </div>
         </figure>
       </li>
-      <li class="no-hover" style="--n: 0;">
+      <li style="--n: 0;">
         <figure class="citas">
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <h2><i>"El arte es un viaje de ida. El diseño es un viaje de vuelta" <b>  Cruz Novillo</b></i></h2>
-              </div>
-              <div class="carousel-item">
-                <h2><i>"Que peligroso cuando los diseñadores usan una lengua que la gente no puede entender" <b> Paula Scher</b></i></h2>
-              </div>
-              <div class="carousel-item">
-                <h2><i>"Todos los problemas del diseño nacen con la audiencia porque no tienes ni idea de lo que quieren" <b> Milton Glaser</b></i></h2>
-              </div>
-            </div>
-          </div>
+         <img src="img/leon.png" alt="">
         </figure>
       </li>
       <li style="--n: 0;">
@@ -241,70 +228,102 @@
 
 </body>
 
+<footer>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-3">
+        <h1 class="footer-logo">LOREM IPSUM</h1>
+      </div>
+      <div class="col-sm-9">
+        <div class="row">
+          <div class="col-8 col-sm-6">
+            <i class="fa-brands fa-square-instagram fa-xl" style="color: #d357fe;"></i> <i class="fa-brands fa-square-behance fa-xl" style="color: #0061ff;"></i></i> <i class="fa-brands fa-square-youtube fa-xl" style="color: #e32400;"></i>
+          </div>
+          <div class="col-4 col-sm-6">
+            <h2 class="text_footer">ALGO MAS NO SE QUE</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
-$(document).ready(function () {
-  // Moon button selected by default
-  handleBackgroundChange('black');
-  handleTextChange('white');
-  handleButtonStyle('transparent');
-  $('#vbtn-radio1').prop('checked', true);
-});
-
-// Function to handle background changes for moon and sun
-function handleBackgroundChange(color) {
-  // Remove existing video element, if any
-  $('body video').remove();
-  
-  $('body').css('background', color);
-}
-
-// Function to handle background change for rainbow
-function handleBackgroundChangeVideo() {
-  // Remove existing video element, if any
-  $('body video').remove();
-
-  var videoElement = '<video autoplay muted loop playsinline style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">';
-  videoElement += '<source src="video/rainbow_mode.mp4" type="video/mp4">';
-  videoElement += 'Your browser does not support the video tag.';
-  videoElement += '</video>';
-  $('body').append(videoElement);
-}
-
-// Function to handle text color changes
-function handleTextChange(color) {
-  $('h1, h2, a').css('color', color);
-}
-
-// Function to handle button style changes
-function handleButtonStyle(gradient) {
-  $('.btn-outline-danger').css({
-    'background': gradient,
-    'border': `1px solid ${gradient}` // Set the border color to the same gradient
-  });
-}
-
-// Radio button change event listener
-$('input[name="vbtn-radio"]').change(function () {
-  if ($('#vbtn-radio1').prop('checked')) {
-    // Moon button selected
+  $(document).ready(function () {
+    // Para que boton luna y fondo negro sean default
     handleBackgroundChange('black');
     handleTextChange('white');
-    handleButtonStyle('transparent');
-  } else if ($('#vbtn-radio2').prop('checked')) {
-    // Sun button selected
-    handleBackgroundChange('white');
-    handleTextChange('black');
-    handleButtonStyle('transparent');
-    $('.sun-icon').toggleClass('selected', $('#vbtn-radio2').prop('checked'));
-  } else if ($('#vbtn-radio3').prop('checked')) {
-    // Rainbow button selected
-    handleBackgroundChangeVideo();
-    handleTextChange('white');
-    handleButtonStyle('linear-gradient(to bottom right, #ff6b6b, #ffcc00, #80ff80, #33ccff, #bf66ff)');
+    handleButtonStyle('transparent', 'white');
+    $('#vbtn-radio1').prop('checked', true);
+  });
+
+  // Function para cambio de fondo entre luna y sol
+  function handleBackgroundChange(color) {
+    // Quitar video si esta seleccionado boton luna/sol
+    $('body video').remove();
+    $('body').css('background', color);
   }
-});
+
+  // Function para el fonto arco-iris
+  function handleBackgroundChangeVideo() {
+    // Quitar video cuando no esta seleccionado boton arcoiris
+    $('body video').remove();
+
+    var videoElement = '<video autoplay muted loop playsinline style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">';
+    videoElement += '<source src="video/rainbow_mode.mp4" type="video/mp4">';
+    videoElement += 'Your browser does not support the video tag.';
+    videoElement += '</video>';
+    $('body').append(videoElement);
+  }
+
+  // Function para cambio de color de texto
+  function handleTextChange(color) {
+    $('h1, h2, a').css('color', color);
+  }
+
+  // Function para cambio de color para boton sol
+  function handleButtonStyle(background, iconColor) {
+    if ($('#vbtn-radio2').prop('checked')) {
+      // Cuando seleccionado el boton sol los bordes seran negros
+      $('.btn-outline-danger').css({
+        'background': background,
+        'border-color': 'black'
+      });
+
+    
+      $('.fa-rainbow').parent().css('color', 'white');
+    } else {
+      
+      $('.btn-outline-danger').css({
+        'background': background,
+        'border-color': 'white'
+      });
+
+    }
+  }
+
+  // Botones radio cambio
+  $('input[name="vbtn-radio"]').change(function () {
+    if ($('#vbtn-radio1').prop('checked')) {
+      // Boton luna cuando seleccionado
+      handleBackgroundChange('black');
+      handleTextChange('white');
+      handleButtonStyle('transparent', 'white');
+    } else if ($('#vbtn-radio2').prop('checked')) {
+      // Boton sol cuando seleccionado
+      handleBackgroundChange('white');
+      handleTextChange('black');
+      $('.sun-icon').toggleClass('selected', $('#vbtn-radio2').prop('checked'));
+      handleButtonStyle('transparent', 'white');
+    } else if ($('#vbtn-radio3').prop('checked')) {
+      // Boton arcoiris cuando seleccionado
+      handleBackgroundChangeVideo();
+      handleTextChange('white');
+      handleButtonStyle('linear-gradient(to bottom right, #ff6b6b, #ffcc00, #80ff80, #33ccff, #bf66ff)', 'linear-gradient(to bottom right, #ff6b6b, #ffcc00, #80ff80, #33ccff, #bf66ff)');
+    }
+  });
 </script>
 
 </html>
