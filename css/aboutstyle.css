@@ -132,3 +132,36 @@ img {
     padding-top: 5vh;
     overflow: hidden;
   }
+
+
+
+  .container.text-center {
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-bottom: 6vh;
+  }
+  
+  .footer-logo {
+    font-family: 'Noticia Text', serif;
+     font-size: 2em;
+     padding-top: 2vh;
+  }
+  
+  .col-8.col-sm-6 {
+    padding-top: 3vh;
+  }
+  
+  .col-4.col-sm-6 {
+    padding-top: 3vh;
+  }
+  
+  .text-footer {
+    font-size: 50%;
+  }
+  
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
