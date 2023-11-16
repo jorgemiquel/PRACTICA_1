@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    color: white
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+
+
+body {
+    background-color: black;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
