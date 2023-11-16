@@ -227,6 +227,12 @@ h2 {
   color: white;
 }
 
+.grid {
+  margin-top: 15vh;
+  margin-left: 15vh;
+  margin-right: 15vh;
+}
+
 @media (min-width: 370px){
   .grid {
     margin: 20px;
