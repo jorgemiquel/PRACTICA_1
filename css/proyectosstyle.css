@@ -9,6 +9,31 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 
+.navbar-brand {
+    font-family: 'Noticia Text', serif;
+    font-size: 2em;
+    padding-left: 2.5em;
+}
+
+
+.nav-link {
+    color: #f5f3f4;
+}
+
+.collapse.navbar-collapse {
+  margin-left: 10vh;
+  margin-right: 10vh;
+  margin-top: 2vh;
+}
+
+
+.bg-dark {
+  --bs-bg-opacity: 0;
+}
+
+.navbar-expand-sm .navbar-collapse {
+  justify-content: right;
+}
 
 
 body {
