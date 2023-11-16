@@ -8,14 +8,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 
-h1 {
-    font-family: 'Young Serif', serif;
-}
 
 
-body {
-    background-color: black;
+.navbar-brand {
+    font-family: 'Noticia Text', serif;
+    font-size: 2em;
+    padding-left: 2.5em;
 }
+
 
 .bg-dark {
   --bs-bg-opacity: 0;
@@ -31,9 +31,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 30vw;
     list-style: none;
-    margin-left: 7vh;
-    margin-right: 7vh;
-    margin-top: 10vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    margin-top: 15vh;
   }
   
 .grid li:nth-child(11n + 9) {
@@ -49,7 +49,7 @@ body {
   
   .grid img {
     object-fit: cover;
-    background: #f5f3f4;
+    background: #ffffff;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
   }
@@ -126,7 +126,6 @@ body {
   }
 
 .container-fluid {
-   background-color: black;
    padding: 0;
 
 }
@@ -138,14 +137,83 @@ body {
 
 
 
-  
-  .grid li:hover {
-    transform: scale(1.3);
-    transition: 300ms;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
+.grid li:hover {
+  transform: scale(1.3);
+  transition: 300ms;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid li.no-hover:hover {
+  transform: none;
+  box-shadow: none;
+}
 
 video {
+  width: 150%;
+  height: 100%;
+}
+
+figure {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 5%;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 57%;
+  margin: 10%;
+}
+
+#carouselExampleSlidesOnly {
+  display: flex;
+  justify-content: center;
+}
+
+.citas {
+  border-radius: 5%;
+}
+
+.btn-group-vertical {
   width: 100%;
-  border-radius: 2%;
+  background-color: none;
+  margin: 7px;
+  border-radius: 6%;
+}
+
+.btn-group-vertical > i {
+  border: 2px solid rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.btn.btn-outline-danger {
+  border: 2px solid rgb(255, 255, 255);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.btn.btn-outline-primary {
+  border: 2px solid rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.btn-outline-warning {
+  border: 2px solid rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sun-icon.selected i {
+  color: white;
 }
