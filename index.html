@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/44380579aa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
+
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
@@ -33,6 +40,7 @@
 </nav>
   
     <ul class="grid">
+      
       <!-- imagenes 1 -->
       <li data-aos="fade-up" data-aos-duration="600" style="--n: 0;">
         <figure>
@@ -41,12 +49,12 @@
       </li>
       <li style="--n: 0;">
         <figure>
-          <video src="video/video.mp4" autoplay loop mute></video>
+          <img width="640" height="427" src="img/graphic3.webp" alt="">
         </figure>
       </li>
       <li style="--n: 0;">
         <figure>
-          <img width="640" height="427" src="img/graphic3.webp" alt="">
+          <video src="video/graphic_video.mp4" autoplay loop mute></video>
         </figure>
       </li>
       <li style="--n: 0;">
@@ -59,14 +67,35 @@
           <img width="640" height="418" src="img/graphic6.png" alt="">
         </figure>
       </li>
-      <li style="--n: 0;">
-        <figure>
-          <img width="640" height="853" src="img/graphic7.jpeg" alt="">
+      <li class="no-hover" style="--n: 0;">
+        <figure class="buttons">
+          <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="vbtn-radio1"><i class="fa-solid fa-moon fa-2xl"></i></label>
+            
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+            <label class="btn btn-outline-warning" for="vbtn-radio2"><i class="fa-solid fa-sun fa-2xl"></i></label>
+            
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+            <label class="btn btn-outline-danger" for="vbtn-radio3"><i class="fa-solid fa-rainbow fa-2xl"></i></label>
+          </div>
         </figure>
       </li>
-      <li style="--n: 0;">
-        <figure>
-          <img width="640" height="314" src="img/graphic7.jpeg" alt="">
+      <li class="no-hover" style="--n: 0;">
+        <figure class="citas">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h2><i>"El arte es un viaje de ida. El diseño es un viaje de vuelta" <b>  Cruz Novillo</b></i></h2>
+              </div>
+              <div class="carousel-item">
+                <h2><i>"Que peligroso cuando los diseñadores usan una lengua que la gente no puede entender" <b> Paula Scher</b></i></h2>
+              </div>
+              <div class="carousel-item">
+                <h2><i>"Todos los problemas del diseño nacen con la audiencia porque no tienes ni idea de lo que quieren" <b> Milton Glaser</b></i></h2>
+              </div>
+            </div>
+          </div>
         </figure>
       </li>
       <li style="--n: 0;">
@@ -208,8 +237,72 @@
     </ul>
     
 
-  
 </body>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+$(document).ready(function () {
+  // Moon button selected by default
+  handleBackgroundChange('black');
+  handleTextChange('white');
+  handleButtonStyle('transparent');
+  $('#vbtn-radio1').prop('checked', true);
+});
+
+// Function to handle background changes for moon and sun
+function handleBackgroundChange(color) {
+  // Remove existing video element, if any
+  $('body video').remove();
+  
+  $('body').css('background', color);
+}
+
+// Function to handle background change for rainbow
+function handleBackgroundChangeVideo() {
+  // Remove existing video element, if any
+  $('body video').remove();
+
+  var videoElement = '<video autoplay muted loop playsinline style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">';
+  videoElement += '<source src="video/rainbow_mode.mp4" type="video/mp4">';
+  videoElement += 'Your browser does not support the video tag.';
+  videoElement += '</video>';
+  $('body').append(videoElement);
+}
+
+// Function to handle text color changes
+function handleTextChange(color) {
+  $('h1, h2, a').css('color', color);
+}
+
+// Function to handle button style changes
+function handleButtonStyle(gradient) {
+  $('.btn-outline-danger').css({
+    'background': gradient,
+    'border': `1px solid ${gradient}` // Set the border color to the same gradient
+  });
+}
+
+// Radio button change event listener
+$('input[name="vbtn-radio"]').change(function () {
+  if ($('#vbtn-radio1').prop('checked')) {
+    // Moon button selected
+    handleBackgroundChange('black');
+    handleTextChange('white');
+    handleButtonStyle('transparent');
+  } else if ($('#vbtn-radio2').prop('checked')) {
+    // Sun button selected
+    handleBackgroundChange('white');
+    handleTextChange('black');
+    handleButtonStyle('transparent');
+    $('.sun-icon').toggleClass('selected', $('#vbtn-radio2').prop('checked'));
+  } else if ($('#vbtn-radio3').prop('checked')) {
+    // Rainbow button selected
+    handleBackgroundChangeVideo();
+    handleTextChange('white');
+    handleButtonStyle('linear-gradient(to bottom right, #ff6b6b, #ffcc00, #80ff80, #33ccff, #bf66ff)');
+  }
+});
+</script>
 
 </html>
