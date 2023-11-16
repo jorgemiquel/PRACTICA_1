@@ -72,6 +72,10 @@ img {
     justify-content: right;
 }
 
+.container-desc {
+    margin: 0 20px;
+}
+
 .carousel {
     padding: 5%;
 }
@@ -96,17 +100,59 @@ h1 {
 p {
     display: flex;
     justify-content: center;
-    margin-left: 4em;
-    margin-right: 4em;
+    margin-left: 32em;
+    margin-right: 32em;
+    margin-top: 5%;
 }
 .videocont {
     margin-top: 40px;
 }
+
+.container.text-center {
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-bottom: 6vh;
+  }
+  
+  .footer-logo {
+    font-family: 'Noticia Text', serif;
+     font-size: 2em;
+     padding-top: 2vh;
+  }
+  
+  .col-8.col-sm-6 {
+    padding-top: 3vh;
+  }
+  
+  .col-4.col-sm-6 {
+    padding-top: 3vh;
+  }
+  
+  .text-footer {
+    font-size: 50%;
+  }
 
 @media (min-width: 990px){
     
     #perfil {
         width: 20%;
     }
-  
+
+
+}
+
+@media (max-width: 1450px) {
+    p {
+        margin-left: 10em;
+        margin-right: 10em;
+        margin-top: 5%;
+        }
+}
+
+@media (max-width: 700px) {
+    p {
+        margin-left: 5em;
+        margin-right: 5em;
+        margin-top: 5%;
+        }
 }
