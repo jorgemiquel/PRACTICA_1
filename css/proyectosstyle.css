@@ -15,6 +15,13 @@ body {
     background-color: black;
 }
 
+video {
+    width: 100%;
+    display: flex;
+    border-radius: 20px;
+    margin: 0;
+}
+
 img {
     width: 100%;
     display: block;
@@ -52,6 +59,7 @@ h1 {
     color: white;
     display: flex;
     justify-content: center;
+    padding-top: 10%;
 }
 
 #perfil {
@@ -65,6 +73,9 @@ p {
     justify-content: center;
     margin-left: 4em;
     margin-right: 4em;
+}
+.videocont {
+    margin-top: 40px;
 }
 
 @media (min-width: 990px){
